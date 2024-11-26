@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1170px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-areas: 
+            "header header header header"
+            "nav nav nav nav"
+            "left-content main-content main-content right-content"
+            "footer footer footer footer"
+            ;
+            grid-auto-rows: minmax(100px auto);
+            grid-auto-columns: 200px 1fr 200px;
+        }
+
+        header{
+            grid-area: header;
+            background-color: aquamarine;
+        }
+     nav.main-menu{
+        grid-area: nav;
+        background-color: red;
+       
+
+     }
+     .left-content{
+        grid-area: left-content;
+        background-color: green;
+     }
+     .main-content{
+        grid-area: main-content;
+        background-color: yellow;
+     }
+     .right-content{
+        grid-area:right-content ;
+        background-color: orange;
+     }
+     footer{
+        grid-area: footer;
+        background-color: pink;
+     }
+     .main-content{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr );
+     }
+     .item{
+        border: 2px solid red;
+        gap:20px
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <nav class="main-menu">Thanh điều hướng</nav>
+        <div class="left-content">left-content</div>
+         <div class="main-content">
+            <div class="item item-1">Item1</div>
+            <div class="item item-2">Item2</div>
+            <div class="item item-3">Item3</div>
+            <div class="item item-4">Item4</div>
+            <div class="item item-5">Item5</div>
+            <div class="item item-6">Item6</div>
+
+         </div>
+         <div class="right-content">right-content</div>
+         <footer>footer</footer>
+    </div>
+</body>
+</html>

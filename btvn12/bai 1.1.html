@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 2fr 16fr 1fr 2fr;
+                width: 600px;
+            }           
+            header{
+                border: 1px dotted rgb(72, 33, 169);
+                grid-column: span 3;
+            }
+
+            .left-content {
+                border: 1px dotted rgb(72, 33, 169);
+                grid-row: span 2;
+            }
+            .right-content{
+                border: 1px dotted rgb(72, 33, 169);
+                grid-row: span 2;
+            }
+            .sub-content{
+                grid-row: span 1;
+                border: 1px dotted rgb(72, 33, 169);
+
+            }
+            footer{
+                border: 1px dotted rgb(72, 33, 169);
+                grid-column: span 3;  
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <div class="left-content">left-content</div>
+        <div class="main-content">main-content</div>
+        <div class="right-content">right-content</div>
+        <div class="sub-content">sub-content</div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
